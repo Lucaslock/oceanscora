@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversário, Ranielly ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298, #6fb1fc);
+      overflow-x: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 80px 20px 40px;
+      animation: fadeIn 2s ease;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Música */
+
+    #botaoMusica {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(30, 60, 114, 0.8);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      backdrop-filter: blur(5px);
+      z-index: 999;
+      transition: 0.3s;
+    }
+
+    #botaoMusica:hover {
+      background: rgba(42, 82, 152, 0.9);
+    }
+
+    /* Galeria */
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin: 40px auto;
+    }
+
+    .foto {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 6px solid rgba(120,180,255,0.9);
+      box-shadow: 0 0 25px rgba(255,255,255,0.6);
+      animation: pulse 3s infinite;
+    }
+
+    .foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Mensagem */
+
+    .mensagem {
+      max-width: 700px;
+      margin: 50px auto;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      border-radius: 20px;
+      line-height: 1.8;
+      animation: fadeInUp 2s ease;
+    }
+
+    .mensagem h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      margin: 50px 0 30px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Animações */
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* Corações */
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      color: rgba(255,255,255,0.8);
+      animation: float 6s linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      to {
+        transform: translateY(-110vh) translateX(100px);
+        opacity: 0;
+      }
+    }
+
+    /* Coraline - Porta */
+
+.porta {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.porta h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.porta-azul {
+  width: 120px;
+  height: 200px;
+  background: linear-gradient(180deg, #0a2a66, #1e5cb3);
+  margin: 25px auto;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(100,150,255,0.8);
+  transition: 0.4s;
+}
+
+.porta-azul:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(150,200,255,1);
+}
+
+.fechadura {
+  width: 12px;
+  height: 12px;
+  background: gold;
+  border-radius: 50%;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mensagem-secreta {
+  display: none;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  animation: fadeIn 1.5s ease;
+  color: #e0f0ff;
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Música -->
+  <audio id="musica" autoplay loop>
+    <source src="niver.oceancora.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="botaoMusica">🔊 Pausar Música</button>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Feliz Aniversário, Minha Noiva! ❤️</h1>
+    <p>14 de Fevereiro — O dia em que minha princesa, nasceu!</p>
+  </header>
+
+  <!-- Galeria -->
+  <div class="galeria">
+
+    <div class="foto">
+      <img src="foto.1.jpeg" alt="Ranielly Pereira">
+    </div>
+
+    <div class="foto">
+      <img src="foto.2.jpeg" alt="Ranielly Pereira">
+    </div>
+
+    <div class="foto">
+      <img src="foto.3.jpeg" alt="Ranielly Pereira">
+    </div>
+
+  </div>
+
+  <!-- Porta Coraline -->
+<section class="porta">
+  <h2>🚪 Uma Porta Secreta...</h2>
+  <p>Abra para descobrir um mundo feito só pra você 💙</p>
+
+  <div id="portaCoraline" class="porta-azul">
+    <div class="fechadura"></div>
+  </div>
+
+  <p id="mensagemSecreta" class="mensagem-secreta">
+    Ranielly, assim como na Coraline, eu atravessaria qualquer porta
+    para estar com você. Você é o meu mundo favorito. 💙✨
+  </p>
+</section>
+
+
+  <!-- Mensagem -->
+  <section class="mensagem">
+    <h2>Para você, Ranielly 💙</h2>
+
+    <p>
+      Minha linda, neste dia tão especial, quero te lembrar o quanto você é
+      importante para mim. Você ilumina meus dias, e molda todo o ambiente por onde passa.
+    </p>
+
+    <p>
+      Cada sorriso seu é um presente, cada abraço é um refúgio,
+      e cada momento ao seu lado é uma lembrança que guardo com carinho.
+    </p>
+
+    <p>
+      Que este novo ano da sua vida seja cheio de sonhos realizados,
+      felicidade sem fim e muito amor — principalmente o meu.
+    </p>
+
+    <p>
+      Eu amo você em cada universo.
+      Estarei contigo para todo o sempre. ❤️
+    </p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    Com todo meu amor,<br>
+    Lucas Cajé 💙
+  </footer>
+
+  <script>
+
+    // Corações flutuando
+    function criarCoracao() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤️';
+
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (15 + Math.random() * 25) + 'px';
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(criarCoracao, 400);
+
+    // Ao clicar
+    document.addEventListener('click', () => {
+      for (let i = 0; i < 5; i++) {
+        setTimeout(criarCoracao, i * 100);
+      }
+    });
+
+    // Música
+    const musica = document.getElementById('musica');
+    const botao = document.getElementById('botaoMusica');
+
+    botao.addEventListener('click', () => {
+      if (musica.paused) {
+        musica.play();
+        botao.innerText = '🔊 Pausar Música';
+      } else {
+        musica.pause();
+        botao.innerText = '▶️ Tocar Música';
+      }
+    });
+
+    // Ativar no celular
+    document.addEventListener('click', () => {
+      musica.play();
+    }, { once: true });
+
+    // Porta Coraline
+const porta = document.getElementById('portaCoraline');
+const mensagem = document.getElementById('mensagemSecreta');
+
+porta.addEventListener('click', () => {
+  mensagem.style.display = 'block';
+  porta.style.transform = 'rotateY(20deg)';
+  porta.style.opacity = '0.8';
+});
+
+
+  </script>
+
+</body>
+</html>
